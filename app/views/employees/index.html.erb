@@ -1,0 +1,12 @@
+<h1>Employees List</h1>
+
+<table>
+	<tr>
+		<th>Employee Name</th>
+	</tr>
+	<% Employee.all.each_with_index do |employee, idx| %>
+		<tr>
+			<td><%= link_to employee[:name], employee_path(idx+1) %></td>
+		</tr>
+	<% end %>
+</table>
